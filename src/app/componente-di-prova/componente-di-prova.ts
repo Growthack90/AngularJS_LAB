@@ -9,15 +9,19 @@ import { FormsModule } from '@angular/forms';
   template: `
     <section class="componente prova">
       <h2>Sono il componente di prova!</h2>
+      <h3>Count</h3>
       <p>Valore count: {{ count() }}</p>
       <p>Valore double: {{ double() }}</p>
+      <h3>Login/Logout</h3>
       <p>currentUser: {{ currentUser() }}</p>
       <button (click)="login('Alice')">Login come Alice</button>
       <button (click)="login('Bob')">Login come Bob</button>
       <button (click)="logout()">Logout</button>
+      <h3>Carrello</h3>
       <p>Prodotti nel carrello: {{ cartItems().join(', ') }}</p>
       <button (click)="addProduct('Uova')">Aggiungi Uova</button>
       <button (click)="addProduct('Formaggio')">Aggiungi Formaggio</button>
+      <h3>Somma</h3>
       <p>Somma: {{ sum() }}</p>
       <button (click)="incA()">Incrementa A</button>
       <button (click)="incB()">Incrementa B</button>
@@ -68,6 +72,8 @@ import { FormsModule } from '@angular/forms';
   `,
 })
 export class ComponenteDiProva {
+  // Esempio di utilizzo di signal per contatore e calcolo derivato
+
   readonly count = signal(0);
   readonly double = computed(() => this.count() * 2);
 
@@ -112,6 +118,8 @@ export class ComponenteDiProva {
 
   // ####################################################### //
 
+  // Esempio di calcolo basato su più signal
+
   a = signal(2);
   b = signal(3);
   sum = computed(() => this.a() + this.b());
@@ -147,5 +155,4 @@ export class ComponenteDiProva {
   onSubmit() {
     this.submitted = true;
   }
-
 }
