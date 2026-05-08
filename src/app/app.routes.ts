@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 
+
 export const routes: Routes = [
 	{
 		path: '',
@@ -13,5 +14,9 @@ export const routes: Routes = [
 	{
 		path: 'contatti',
 		loadComponent: () => import('./contatti/contatti').then((module) => module.Contatti)
-	}
+	},
+  {
+    path: '**',
+    loadComponent: () => import('./error/error').then((module) => module.Error),
+  }
 ];
