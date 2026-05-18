@@ -10,7 +10,8 @@ import { ComponenteDiProva } from './componente-di-prova/componente-di-prova';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App {
-  protected readonly title = signal('miaprima-app');
+  protected readonly title = signal('from my first app');
   protected readonly nomeUtente = signal('Mimmone');
 }

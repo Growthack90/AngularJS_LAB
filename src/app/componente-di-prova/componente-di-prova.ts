@@ -71,6 +71,7 @@ import { FormsModule } from '@angular/forms';
     }
   `,
 })
+
 export class ComponenteDiProva {
   // Esempio di utilizzo di signal per contatore e calcolo derivato
 

@@ -6,6 +6,7 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="profilo-saluto">
+      <h2>Sono il componente ProfiloSaluto!</h2>
       <h2>{{ messaggioCompleto() }}</h2>
       <p>Nome in maiuscolo: {{ nomeMaiuscolo() }}</p>
       <p>Lunghezza del nome: {{ lunghezzaNome() }}</p>
@@ -30,6 +31,7 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
     }
   `,
 })
+
 export class ProfiloSaluto {
   readonly nome = input.required<string>();
   readonly ruolo = input('studente Angular');
